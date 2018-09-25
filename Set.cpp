@@ -9,6 +9,8 @@ Description     : Set is an ADT that inherits SetInterface's public member funct
 #include <vector>
 #include <iostream>
 
+//Public member functions inherited from SetInterface
+    
 template <class ItemType>
 Set<ItemType>::Set() : item_count_(0), max_items_(DEFAULT_SET_SIZE) {}
 
@@ -88,3 +90,28 @@ std::vector<ItemType> Set<ItemType>::toVector() const {
   }
   return set_entries;
 }
+
+//Private member function
+
+template <class ItemType> int Set<ItemType>::getIndexOf(const ItemType& target) const {
+    
+   bool found = false;
+   int result = -1;
+   int search_index = 0;
+   
+   // If the set is empty, item_count_ is 0, so loop is skipped
+   while (!found && (search_index < item_count_))
+   {
+      if (items_[search_index] == target)
+      {
+         found = true;
+         result = search_index;
+      } 
+      else
+      {
+         search_index++;
+      }  // end if
+   }  // end while
+   
+   return result;
+}  // end getIndexOf

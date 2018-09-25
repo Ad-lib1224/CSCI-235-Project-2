@@ -72,8 +72,10 @@ std::string Song::getAlbum() const {
  
 }
 
-bool operator==(const Song &lhs, const Song &rhs){
-  if(lhs == rhs){
+bool operator==(const Song& lhs, const Song& rhs) {
+    
+  if(lhs == rhs) {
+      
     return true;
   }
   return false;

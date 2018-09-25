@@ -10,9 +10,10 @@ PlayList::PlayList() {
     Set<Song> playlist_;
 }
 
-//Passes new_song as anEntry. If successful, new_song is added to the playlist
+//Paramatized constructor that passes a_song as anEntry. If successful, a_song is added to the playlist
 
 PlayList::PlayList(const Song &a_song) {
+    
     playlist_.add(a_song); 
 }
 
@@ -27,7 +28,7 @@ int PlayList::getNumberOfSongs() const {
 
 bool PlayList::isEmpty() const {
     
-  if(playlist_.getCurrentSize() == 0){
+  if(playlist_.getCurrentSize() == 0) {
       
     return true;
   }
