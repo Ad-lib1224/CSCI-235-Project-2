@@ -1,8 +1,8 @@
 /******************************************************************************
-Title           : GeniusBar.cpp
+Title           : Set.h
 Author          : Starasia Wright
-Created on      : 2018-08-30
-Description     : Provides interface to manage GeniusBar
+Created on      : 2018-09-24
+Description     : Provides interface to manage PlayList
 ******************************************************************************/
 #ifndef SET_H_
 #define SET_H_

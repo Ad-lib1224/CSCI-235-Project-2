@@ -1,3 +1,11 @@
+#include "Set.h"
+#include "Set.cpp"
+#include "Song.h"
+#include "Song.cpp"
+#include "PlayList.h"
+#include "PlayList.cpp"
+using namespace std;
+
 int main() {
 
     

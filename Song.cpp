@@ -1,8 +1,8 @@
 /******************************************************************************
-Title           : Customer.cpp
+Title           : Song.cpp
 Author          : Starasia Wright
-Created on      : 2018-08-30
-Description     : Provides the interface to access customer information
+Created on      : 2018-09-24
+Description     : Provides the interface to generate a playlist
 ******************************************************************************/
 #include "Set.h"
 #include "Song.h"
@@ -32,9 +32,26 @@ Song::Song(const std::string& title, const std::string& author, const std::strin
 
 }
 
+void Song::setTitle(std::string title) {
+    
+    title_ = title;
+    
+}
+
+void Song::setAuthor(std::string author) {
+    
+    author_ = author;
+    
+}
+
+void Song::setAlbum(std::string album) {
+   
+    album_ = album;
+}
+
 //Accessor for title_
 
-string Song::getTitle() {
+std::string Song::getTitle() const {
     
     return title_;
  
@@ -42,27 +59,22 @@ string Song::getTitle() {
 
 //Accessor for author_
 
-string Song::getAuthor() {
+std::string Song::getAuthor() const {
     
     return author_;
 }
 
 //Accessor for album_
 
-int Song::getAlbum() {
+std::string Song::getAlbum() const {
     
     return album_;
  
 }
 
-void Song::setTitle(string title) {
-    
-}
-
-void Song::setAuthor(string author) {
-    
-}
-
-void Song::setAlbum(string album) {
-    
+bool operator==(const Song &lhs, const Song &rhs){
+  if(lhs == rhs){
+    return true;
+  }
+  return false;
 }
